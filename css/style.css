@@ -886,15 +886,26 @@ ul.tag-cloud li {
 }
 
 
+
+/*****ICON***/
+.org-icon{
+    background-image: url("images/logo.png");
+    height:20px;
+    width:20px;
+    display:block;
+}
+
+
 /*-----------------------------------------------------------------------------------*/
 
 
 /*  TEAM
 /*-----------------------------------------------------------------------------------*/
 
-.team-member:hover .img-thumbnail {
-    background: transparent;
-    background-color: #00b29e;
+.team-member:hover {
+    /* background: transparent; */
+    /* background-color: #00b29e; */
+    opacity:0.8;
 }
 
 .team-member .img-thumbnail {
@@ -939,10 +950,12 @@ ul.tag-cloud li {
 
 .team-image {
     position: relative;
+    /* max-width:100%;
+    height:auto; */
     padding: 0;
 }
 
-.team-image .overlay {
+ .team-image .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -957,7 +970,7 @@ ul.tag-cloud li {
     -o-transition: opacity 300ms;
     transition: opacity 300ms;
 }
-
+/*
 .team-image .overlay .preview {
     position: relative;
     top: 50%;
@@ -968,7 +981,7 @@ ul.tag-cloud li {
 .team-image:hover .overlay {
     opacity: 0.8;
     
-}
+} */
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -1964,6 +1977,7 @@ img.author-box-image {
     top: auto;
     bottom: 0;
     margin-right: -19px;
+    margin-top:20px;
 }
 
 #quote-carousel .carousel-indicators li {
