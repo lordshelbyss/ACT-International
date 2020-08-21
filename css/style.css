@@ -984,6 +984,12 @@ ul.tag-cloud li {
 } */
 
 
+
+/******Company LOGO ****/
+.company-logo{
+    
+}
+
 /*-----------------------------------------------------------------------------------*/
 
 
@@ -2060,10 +2066,10 @@ img.author-box-image {
    CONTACT
    ========================================================================== */
 
-#contactform input#name,
-#contactform input#email,
-#contactform input#website,
-#contactform textarea#comments {
+#contact-form input#name,
+#contact-form input#email,
+#contact-form input#phone,
+#contact-form textarea#comments {
     width: 100%;
     padding: 10px 5px;
     margin-bottom: 15px;
@@ -2072,7 +2078,7 @@ img.author-box-image {
     border: none;
 }
 
-#contactform textarea#comments {
+#contact-form textarea#comments {
     min-height: 150px;
 }
 

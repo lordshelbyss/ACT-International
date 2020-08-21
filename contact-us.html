@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,37 +24,57 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/images/ico/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57x57.png">
 
+    <style>
+        .response_msg {
+            margin-top: 10px;
+            font-size: 13px;
+            background: #E5D669;
+            color: #ffffff;
+            width: 250px;
+            padding: 3px;
+            display: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript">
-    jQuery(document).ready(function($){
-    'use strict';
-        jQuery('body').backstretch([
-            "http://placehold.it/800x600",
-            "http://placehold.it/800x600",
-            "http://placehold.it/800x600"
-        ], {duration: 5000, fade: 500});
+        jQuery(document).ready(function ($) {
+            'use strict';
+            jQuery('body').backstretch([
+                "http://placehold.it/800x600",
+                "http://placehold.it/800x600",
+                "http://placehold.it/800x600"
+            ], { duration: 5000, fade: 500 });
 
-        $("#mapwrapper").gMap({ controls: false,
-            scrollwheel: false,
-            markers: [{
-                latitude:40.7566,
+            $("#mapwrapper").gMap({
+                controls: false,
+                scrollwheel: false,
+                markers: [{
+                    latitude: 40.7566,
+                    longitude: -73.9863,
+                    icon: {
+                        image: "images/marker.png",
+                        iconsize: [44, 44],
+                        iconanchor: [12, 46],
+                        infowindowanchor: [12, 0]
+                    }
+                }],
+                icon: {
+                    image: "images/marker.png",
+                    iconsize: [26, 46],
+                    iconanchor: [12, 46],
+                    infowindowanchor: [12, 0]
+                },
+                latitude: 40.7566,
                 longitude: -73.9863,
-            icon: { image: "images/marker.png",
-                iconsize: [44,44],
-                iconanchor: [12,46],
-                infowindowanchor: [12, 0] } }],
-            icon: {
-                image: "images/marker.png",
-                iconsize: [26, 46],
-                iconanchor: [12, 46],
-                infowindowanchor: [12, 0] },
-            latitude:40.7566,
-            longitude: -73.9863,
-            zoom: 14 });
-    });
+                zoom: 14
+            });
+        });
     </script>
-</head><!--/head-->
+</head>
+<!--/head-->
+
 <body>
-<div id="preloader"></div>
+    <div id="preloader"></div>
     <header class="navbar navbar-inverse navbar-fixed-top opaqued" role="banner">
         <div class="container">
             <div class="navbar-header">
@@ -76,7 +97,8 @@
                 </ul>
             </div>
         </div>
-    </header><!--/header-->
+    </header>
+    <!--/header-->
 
     <section id="single-page-slider" class="no-margin">
         <div class="carousel slide" data-ride="carousel">
@@ -88,15 +110,18 @@
                                 <div class="center gap fade-down section-heading">
                                     <h2 class="main-title">Get In Touch</h2>
                                     <hr>
-                                    <p>Of an or game gate west face shed. ﻿no great but music too old found arose.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-    </section><!--/#main-slider-->
+                </div>
+                <!--/.item-->
+            </div>
+            <!--/.carousel-inner-->
+        </div>
+        <!--/.carousel-->
+    </section>
+    <!--/#main-slider-->
 
     <div id="content-wrapper">
         <!-- <div id="mapwrapper">
@@ -117,7 +142,7 @@
                             <span class="fa fa-phone"></span>+91-9323581847<br />
                             <span class="fa fa-mobile"></span>+91-7977161374<br />
                             <span class="fa fa-envelope"></span> <a href="#">prodipto.br@gmail.com</a> <br />
-                            
+
                         </p>
                     </div><!-- col -->
 
@@ -126,10 +151,10 @@
                         <br>
                         <br>
                         <div id="message"></div>
-                        <form method="post" action="sendemail.php" id="contactform">
-                            <input type="text" name="name" id="name" placeholder="Name" />
-                            <input type="text" name="email" id="email" placeholder="Email" />
-                            <input type="text" name="website" id="website" placeholder="Website" />
+                        <form method="post" action="" id="contact-form">
+                            <input type="text" name="your_name" id="name" placeholder="Name" required />
+                            <input type="text" name="your_email" id="email" placeholder="Email" required />
+                            <input type="text" name="your_phone" id="phone" placeholder="Phone" required />
                             <textarea name="comments" id="comments" placeholder="Comments"></textarea>
                             <input class="btn btn-outlined btn-primary" type="submit" name="submit" value="Submit" />
                         </form>
@@ -146,8 +171,7 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6 about-us-widget">
                         <h4>Global Coverage</h4>
-                        <p>Was drawing natural fat respect husband. An as noisy an offer drawn blush place. These tried
-                            for way joy wrote witty. In mr began music weeks after at begin.</p>
+                        <p>We offer our services to countries around the globe</p>
                     </div>
                     <!--/.col-md-3-->
 
@@ -155,15 +179,15 @@
                         <h4>Company</h4>
                         <div>
                             <ul class="arrow">
-                                <li><a href="#about-us">Company Overview</a></li>
-                                <li><a href="#team">Meet The Team</a></li>
-                                <li><a href="#services">Our Skills</a></li>
+                                <li><a href="about-us.html">Company Overview</a></li>
+                                <li><a href="about-us.html">Meet The Team</a></li>
+                                <li><a href="services.html">Our Skills</a></li>
                                 <li><a href="#contact">Contact</a></li>
 
                             </ul>
                         </div>
                     </div>
-                   
+
 
                     <div class="col-md-4 col-sm-6">
                         <h4>Registered Office</h4>
@@ -208,7 +232,41 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/plugins.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWDPCiH080dNCTYC-uprmLOn2mt2BMSUk&amp;sensor=true"></script>
     <script src="js/init.js"></script>
+
+    <script>
+            $("#contact-form").on("submit", function (e) {
+                e.preventDefault();
+                if ($("#contact-form [name='your_name']").val() === '') {
+                    $("#contact-form [name='your_name']").css("border", "1px solid red");
+                }
+                else if ($("#contact-form [name='your_email']").val() === '') {
+                    $("#contact-form [name='your_email']").css("border", "1px solid red");
+                }
+                else {
+                    var sendData = $(this).serialize();
+                    $.ajax({
+                        type: "POST",
+                        url: "get_response.php",
+                        data: sendData,
+                        success: function (data) {
+                            
+                            $("#contact-form").find("input[type=text], input[type=email], textarea").val("");
+                        }
+                    });
+                }
+            });
+            $("#contact-form input").blur(function () {
+                var checkValue = $(this).val();
+                if (checkValue != '') {
+                    $(this).css("border", "1px solid #eeeeee");
+                }
+            });
+
+    </script>
+
 </body>
+
 </html>
