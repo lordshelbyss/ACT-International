@@ -1,5 +1,5 @@
 <?php
-$toEmail = "prodipto.br@gmail.com";
+$toEmail = "f20180387@hyderabad.bits-pilani.ac.in";
 $mailHeaders = "From: " . $_POST["your_name"] . "<". $_POST["your_email"] .">\r\n";
 if(mail($toEmail, $_POST["comments"], $_POST["your_phone"], $mailHeaders)) {
 echo"<p class='success'>Contact Mail Sent.</p>";

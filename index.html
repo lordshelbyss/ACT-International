@@ -645,10 +645,10 @@
                         <br>
                         <br>
                         <div id="message"></div>
-                        <form method="post" action="" id="contact-form">
-                                <input type="text" name="your_name" id="name" placeholder="Name"  />
-                                <input type="text" name="your_email" id="email" placeholder="Email"  />
-                                <input type="text" name="your_phone" id="phone" placeholder="Phone"  />
+                        <form method="post" action="connect.php" id="contact-form">
+                                <input type="text" name="your_name" id="name" placeholder="Name" required />
+                                <input type="text" name="your_email" id="email" placeholder="Email" required />
+                                <input type="text" name="your_phone" id="phone" placeholder="Phone" required />
                                 <textarea name="comments" id="comments" placeholder="Comments"></textarea>
                                 <input class="btn btn-outlined btn-primary" type="submit" name="submit" value="Submit" />
                         </form>
@@ -747,7 +747,7 @@
                             url: "get_response.php",
                             data: sendData,
                             success: function (data) {
-                                
+                                alert('Thank You');
                                 $("#contact-form").find("input[type=text], input[type=email], textarea").val("");
                             }
                         });
